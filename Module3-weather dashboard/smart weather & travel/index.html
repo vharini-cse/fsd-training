@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Weather & Travel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                ☁️ WeatherWise
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="forecast.html">Forecast</a></li>
+                <li><a href="travel.html">Travel Guide</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="tagline">SMART WEATHER • SMART TRAVEL</p>
+
+                <h1>
+                    Plan Your Journey<br>
+                    With the <span>Weather</span>
+                </h1>
+
+                <p class="hero-text">
+                    Get real-time weather information and discover
+                    travel suggestions based on the weather conditions
+                    of your destination.
+                </p>
+
+                <!-- City Search -->
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="cityInput"
+                        placeholder="Enter a city..."
+                    >
+
+                    <button onclick="searchWeather()">
+                        Check Weather
+                    </button>
+                </div>
+
+                <p id="searchMessage"></p>
+
+            </div>
+
+
+            <!-- Weather Preview Card -->
+            <div class="weather-preview">
+
+                <div class="weather-icon">☀️</div>
+
+                <h2>Explore the Weather</h2>
+
+                <p>
+                    Search for any city and discover
+                    its current weather conditions.
+                </p>
+
+                <div class="preview-info">
+
+                    <div>
+                        <strong>🌡️</strong>
+                        <span>Temperature</span>
+                    </div>
+
+                    <div>
+                        <strong>💧</strong>
+                        <span>Humidity</span>
+                    </div>
+
+                    <div>
+                        <strong>💨</strong>
+                        <span>Wind</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features Section -->
+        <section class="features">
+
+            <div class="section-heading">
+                <p>WHAT YOU CAN DO</p>
+                <h2>Everything You Need for Your Trip</h2>
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌤️</div>
+                    <h3>Live Weather</h3>
+                    <p>
+                        Check real-time weather conditions
+                        for your destination.
+                    </p>
+                    <a href="weather.html">Explore Weather →</a>
+                </div>
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Weather Forecast</h3>
+                    <p>
+                        View upcoming weather conditions
+                        and plan your activities.
+                    </p>
+                    <a href="forecast.html">View Forecast →</a>
+                </div>
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">🧳</div>
+                    <h3>Travel Suggestions</h3>
+                    <p>
+                        Get useful travel ideas based on
+                        the current weather.
+                    </p>
+                    <a href="travel.html">Travel Guide →</a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Call to Action -->
+        <section class="cta">
+
+            <div>
+                <p>READY TO EXPLORE?</p>
+
+                <h2>
+                    Check the weather before
+                    you start your journey.
+                </h2>
+
+                <a href="weather.html" class="cta-button">
+                    Start Exploring
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 WeatherWise | Smart Weather & Travel Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+        function searchWeather() {
+
+            const city = document.getElementById("cityInput").value.trim();
+            const message = document.getElementById("searchMessage");
+
+            if (city === "") {
+
+                message.textContent = "Please enter a city name.";
+                message.style.color = "red";
+
+                return;
+            }
+
+            // Save the searched city
+            localStorage.setItem("selectedCity", city);
+
+            // Open weather page
+            window.location.href = "weather.html";
+        }
+    </script>
+
+</body>
+</html>

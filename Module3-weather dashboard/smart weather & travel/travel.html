@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Guide | WeatherWise</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                ☁️ WeatherWise
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="forecast.html">Forecast</a></li>
+                <li><a href="travel.html" class="active">Travel Guide</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="travel-page">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <p class="tagline">TRAVEL SMART</p>
+
+            <h1>Weather-Based Travel Guide</h1>
+
+            <p>
+                Choose a weather condition and discover
+                activities and travel tips for your journey.
+            </p>
+
+        </section>
+
+
+        <!-- Weather Selection -->
+        <section class="travel-selector">
+
+            <label for="weatherType">
+                Select Weather Condition
+            </label>
+
+            <select id="weatherType">
+
+                <option value="sunny">
+                    ☀️ Sunny
+                </option>
+
+                <option value="cloudy">
+                    ☁️ Cloudy
+                </option>
+
+                <option value="rainy">
+                    🌧️ Rainy
+                </option>
+
+                <option value="cold">
+                    ❄️ Cold
+                </option>
+
+                <option value="pleasant">
+                    🌤️ Pleasant
+                </option>
+
+            </select>
+
+            <button id="suggestBtn">
+                Get Travel Suggestions
+            </button>
+
+        </section>
+
+
+        <!-- Travel Result -->
+        <section id="travelResult" class="travel-result">
+
+            <div class="travel-result-icon" id="travelIcon">
+                ☀️
+            </div>
+
+            <div class="travel-result-content">
+
+                <p class="result-label">
+                    RECOMMENDED FOR YOU
+                </p>
+
+                <h2 id="travelTitle">
+                    Sunny Day Adventures
+                </h2>
+
+                <p id="travelDescription">
+                    Sunny weather is perfect for outdoor
+                    exploration and sightseeing.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Suggestions -->
+        <section class="suggestions">
+
+            <div class="section-heading">
+
+                <p>TRAVEL IDEAS</p>
+
+                <h2>What Can You Do?</h2>
+
+            </div>
+
+
+            <div class="suggestion-grid" id="suggestionGrid">
+
+                <div class="suggestion-card">
+
+                    <div class="suggestion-icon">
+                        🏖️
+                    </div>
+
+                    <h3>Outdoor Exploration</h3>
+
+                    <p>
+                        Visit parks, beaches and outdoor
+                        attractions when the weather is clear.
+                    </p>
+
+                </div>
+
+
+                <div class="suggestion-card">
+
+                    <div class="suggestion-icon">
+                        📸
+                    </div>
+
+                    <h3>Sightseeing</h3>
+
+                    <p>
+                        Explore landmarks and capture
+                        memorable travel photographs.
+                    </p>
+
+                </div>
+
+
+                <div class="suggestion-card">
+
+                    <div class="suggestion-icon">
+                        🚶
+                    </div>
+
+                    <h3>Walking Tours</h3>
+
+                    <p>
+                        Discover the city by taking a
+                        relaxing walking tour.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Travel Tips -->
+        <section class="travel-tips">
+
+            <div class="section-heading">
+
+                <p>TRAVEL SMARTER</p>
+
+                <h2>Quick Travel Tips</h2>
+
+            </div>
+
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+                    <span>🧴</span>
+                    <h3>Stay Prepared</h3>
+                    <p>
+                        Carry essentials such as water,
+                        sunscreen and necessary medicines.
+                    </p>
+                </div>
+
+
+                <div class="tip-card">
+                    <span>👕</span>
+                    <h3>Dress Accordingly</h3>
+                    <p>
+                        Choose clothing that matches the
+                        expected weather conditions.
+                    </p>
+                </div>
+
+
+                <div class="tip-card">
+                    <span>☂️</span>
+                    <h3>Check the Forecast</h3>
+                    <p>
+                        Check the latest forecast before
+                        starting your journey.
+                    </p>
+                </div>
+
+
+                <div class="tip-card">
+                    <span>📱</span>
+                    <h3>Stay Updated</h3>
+                    <p>
+                        Keep your weather information
+                        updated throughout your trip.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Call To Action -->
+        <section class="cta">
+
+            <div>
+
+                <p>PLAN WITH CONFIDENCE</p>
+
+                <h2>
+                    Check the latest weather
+                    before you travel.
+                </h2>
+
+                <a href="weather.html" class="cta-button">
+                    Check Current Weather
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 WeatherWise | Smart Weather & Travel Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/travel.js"></script>
+
+</body>
+</html>

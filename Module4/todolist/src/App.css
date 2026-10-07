@@ -1,0 +1,104 @@
+/* Main dashboard */
+.dashboard {
+  text-align: center;
+  padding: 20px;
+}
+
+.dashboard h1 {
+  font-size: 48px;
+  margin: 0 0 40px;
+}
+
+.dashboard h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* Todo table */
+.dashboard table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 22px;
+}
+
+.dashboard th {
+  background-color: #1976d2;
+  color: white;
+  padding: 18px;
+  font-size: 24px;
+}
+
+.dashboard td {
+  padding: 18px;
+  text-align: left;
+  border: 1px solid #90caf9;
+}
+
+.dashboard tbody tr:nth-child(even) {
+  background-color: #e3f2fd;
+}
+
+/* Buttons */
+.dashboard button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dashboard button:hover {
+  background-color: #1565c0;
+}
+
+/* Add Todolist button */
+.dashboard > button {
+  margin-top: 50px;
+}
+/* Actions page */
+.actions {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.actions h1 {
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.actions h2 {
+  font-size: 36px;
+  margin-bottom: 45px;
+}
+
+.actions label {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.actions input {
+  width: 320px;
+  height: 38px;
+  font-size: 22px;
+  padding: 5px;
+}
+
+.actions button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 14px 28px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #1565c0;
+}

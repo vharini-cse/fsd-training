@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Transaction | ExpenseWise</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">₹</div>
+
+            <div>
+                <h2>ExpenseWise</h2>
+                <span>Personal Expense Calculator</span>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Dashboard</a>
+
+            <a href="add-expense.html" class="active">
+                Add Transaction
+            </a>
+
+            <a href="expense.html">
+                Expenses
+            </a>
+
+            <a href="report.html">
+                Report
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="form-page">
+
+        <!-- PAGE INTRO -->
+
+        <section class="page-intro">
+
+            <div>
+
+                <p class="small-heading">
+                    TRANSACTION MANAGER
+                </p>
+
+                <h1>
+                    Add a new
+                    <span>transaction.</span>
+                </h1>
+
+                <p>
+                    Record your income or expenses to keep your
+                    personal financial summary up to date.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FORM AREA ================= -->
+
+        <section class="transaction-form-section">
+
+
+            <!-- FORM CARD -->
+
+            <div class="form-card">
+
+                <div class="form-card-header">
+
+                    <div>
+
+                        <p class="small-heading">
+                            TRANSACTION DETAILS
+                        </p>
+
+                        <h2>
+                            Enter the details
+                        </h2>
+
+                    </div>
+
+                    <div class="form-icon">
+                        ₹
+                    </div>
+
+                </div>
+
+
+                <!-- TRANSACTION FORM -->
+
+                <form id="transactionForm">
+
+
+                    <!-- TRANSACTION TYPE -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Transaction Type
+                        </label>
+
+                        <div class="type-options">
+
+                            <label class="type-option income-option">
+
+                                <input
+                                    type="radio"
+                                    name="type"
+                                    value="income"
+                                    checked
+                                >
+
+                                <span class="type-box">
+
+                                    <span class="type-symbol">
+                                        ↗
+                                    </span>
+
+                                    <span>
+                                        <strong>Income</strong>
+                                        <small>Money received</small>
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="type-option expense-option">
+
+                                <input
+                                    type="radio"
+                                    name="type"
+                                    value="expense"
+                                >
+
+                                <span class="type-box">
+
+                                    <span class="type-symbol">
+                                        ↘
+                                    </span>
+
+                                    <span>
+                                        <strong>Expense</strong>
+                                        <small>Money spent</small>
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="form-group">
+
+                        <label for="description">
+                            Description
+                        </label>
+
+                        <input
+                            type="text"
+                            id="description"
+                            name="description"
+                            placeholder="Example: Monthly salary, groceries, bus pass..."
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- AMOUNT -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="amount">
+                                Amount (₹)
+                            </label>
+
+                            <div class="amount-input">
+
+                                <span>₹</span>
+
+                                <input
+                                    type="number"
+                                    id="amount"
+                                    name="amount"
+                                    placeholder="0.00"
+                                    min="1"
+                                    step="0.01"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DATE -->
+
+                        <div class="form-group">
+
+                            <label for="date">
+                                Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="date"
+                                name="date"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            Expense Category
+                        </label>
+
+                        <select
+                            id="category"
+                            name="category"
+                        >
+
+                            <option value="Food">
+                                🍴 Food
+                            </option>
+
+                            <option value="Transport">
+                                🚌 Transport
+                            </option>
+
+                            <option value="Education">
+                                📚 Education
+                            </option>
+
+                            <option value="Shopping">
+                                🛍️ Shopping
+                            </option>
+
+                            <option value="Entertainment">
+                                🎬 Entertainment
+                            </option>
+
+                            <option value="Bills">
+                                💡 Bills
+                            </option>
+
+                            <option value="Other">
+                                📌 Other
+                            </option>
+
+                        </select>
+
+                        <small class="field-note">
+                            Category is mainly used for expense tracking.
+                        </small>
+
+                    </div>
+
+
+                    <!-- OPTIONAL NOTE -->
+
+                    <div class="form-group">
+
+                        <label for="note">
+                            Note
+                            <span>(Optional)</span>
+                        </label>
+
+                        <textarea
+                            id="note"
+                            name="note"
+                            rows="4"
+                            placeholder="Add a short note about this transaction..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="form-actions">
+
+                        <a
+                            href="index.html"
+                            class="cancel-btn"
+                        >
+                            Cancel
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                        >
+                            Save Transaction →
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- ================= SIDE INFORMATION ================= -->
+
+            <aside class="form-info">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        💡
+                    </div>
+
+                    <h3>
+                        Keep it simple
+                    </h3>
+
+                    <p>
+                        Add every important income and expense
+                        so your savings calculation becomes more accurate.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Track categories
+                    </h3>
+
+                    <p>
+                        Categorizing expenses helps you understand
+                        where most of your money is being spent.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card highlight-info">
+
+                    <div class="info-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Your calculation
+                    </h3>
+
+                    <div class="calculation-box">
+
+                        <span>
+                            Income
+                        </span>
+
+                        <strong>−</strong>
+
+                        <span>
+                            Expenses
+                        </span>
+
+                        <strong>=</strong>
+
+                        <span>
+                            Savings
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- ================= PROGRAMMING CONCEPT ================= -->
+
+        <section class="logic-preview">
+
+            <div>
+
+                <p class="small-heading">
+                    HOW THE CALCULATOR WORKS
+                </p>
+
+                <h2>
+                    Every transaction contributes
+                    to your final summary.
+                </h2>
+
+            </div>
+
+
+            <div class="logic-steps">
+
+                <div class="logic-step">
+
+                    <span>01</span>
+
+                    <div>
+                        <h3>Record</h3>
+                        <p>Enter income or expense details.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="logic-step">
+
+                    <span>02</span>
+
+                    <div>
+                        <h3>Categorize</h3>
+                        <p>Group expenses into useful categories.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="logic-step">
+
+                    <span>03</span>
+
+                    <div>
+                        <h3>Calculate</h3>
+                        <p>Find total expenses and savings.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    ExpenseWise
+                </h3>
+
+                <p>
+                    Personal Expense Calculator
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Dashboard
+                </a>
+
+                <a href="add-expense.html">
+                    Add Transaction
+                </a>
+
+                <a href="expense.html">
+                    Expenses
+                </a>
+
+                <a href="report.html">
+                    Report
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                Module 1 Take-Home Assignment • Personal Expense Calculator
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Main JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

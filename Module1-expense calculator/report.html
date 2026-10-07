@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Summary Report | ExpenseWise</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">₹</div>
+
+            <div>
+                <h2>ExpenseWise</h2>
+                <span>Personal Expense Calculator</span>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Dashboard
+            </a>
+
+            <a href="add-expense.html">
+                Add Transaction
+            </a>
+
+            <a href="expense.html">
+                Expenses
+            </a>
+
+            <a href="report.html" class="active">
+                Report
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="report-page">
+
+        <!-- PAGE INTRO -->
+
+        <section class="page-intro report-intro">
+
+            <div>
+
+                <p class="small-heading">
+                    FINANCIAL SUMMARY
+                </p>
+
+                <h1>
+                    Your financial
+                    <span>report.</span>
+                </h1>
+
+                <p>
+                    Get a clear picture of your income, spending,
+                    savings and expense categories.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-btn"
+                onclick="window.print()">
+                Print Report
+            </button>
+
+        </section>
+
+
+        <!-- ================= MAIN FINANCIAL SUMMARY ================= -->
+
+        <section class="report-summary">
+
+            <div class="report-card income-report">
+
+                <div class="report-card-icon">
+                    ↗
+                </div>
+
+                <div>
+
+                    <p>
+                        TOTAL INCOME
+                    </p>
+
+                    <h2 id="reportIncome">
+                        ₹0
+                    </h2>
+
+                    <span>
+                        Money received
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-card expense-report">
+
+                <div class="report-card-icon">
+                    ↘
+                </div>
+
+                <div>
+
+                    <p>
+                        TOTAL EXPENSES
+                    </p>
+
+                    <h2 id="reportExpense">
+                        ₹0
+                    </h2>
+
+                    <span>
+                        Money spent
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-card savings-report">
+
+                <div class="report-card-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <p>
+                        TOTAL SAVINGS
+                    </p>
+
+                    <h2 id="reportSavings">
+                        ₹0
+                    </h2>
+
+                    <span>
+                        Income minus expenses
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-card rate-report">
+
+                <div class="report-card-icon">
+                    %
+                </div>
+
+                <div>
+
+                    <p>
+                        SAVINGS RATE
+                    </p>
+
+                    <h2 id="reportRate">
+                        0%
+                    </h2>
+
+                    <span>
+                        Percentage saved
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SAVINGS ANALYSIS ================= -->
+
+        <section class="analysis-section">
+
+            <div class="analysis-card">
+
+                <div class="analysis-heading">
+
+                    <div>
+
+                        <p class="small-heading">
+                            SAVINGS ANALYSIS
+                        </p>
+
+                        <h2>
+                            How much did you save?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="savings-visual">
+
+                    <div class="savings-circle">
+
+                        <div>
+
+                            <strong id="circleSavingsRate">
+                                0%
+                            </strong>
+
+                            <span>
+                                Saved
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="savings-details">
+
+                        <div class="detail-row">
+
+                            <span>
+                                Total Income
+                            </span>
+
+                            <strong id="analysisIncome">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-row">
+
+                            <span>
+                                Total Expenses
+                            </span>
+
+                            <strong id="analysisExpense">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-row highlighted-row">
+
+                            <span>
+                                Remaining Savings
+                            </span>
+
+                            <strong id="analysisSavings">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FINANCIAL STATUS -->
+
+            <div class="status-card">
+
+                <div class="status-icon" id="statusIcon">
+                    ✓
+                </div>
+
+                <p class="small-heading">
+                    FINANCIAL STATUS
+                </p>
+
+                <h2 id="financialStatus">
+                    Start tracking
+                </h2>
+
+                <p id="statusMessage">
+                    Add your income and expenses to generate
+                    your personalized financial status.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORY REPORT ================= -->
+
+        <section class="category-report-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="small-heading">
+                        EXPENSE ANALYSIS
+                    </p>
+
+                    <h2>
+                        Where your money went
+                    </h2>
+
+                </div>
+
+                <a
+                    href="expense.html"
+                    class="view-link">
+                    View expenses →
+                </a>
+
+            </div>
+
+
+            <div class="category-report-grid">
+
+
+                <!-- FOOD -->
+
+                <div class="report-category">
+
+                    <div class="category-report-top">
+
+                        <div class="category-title">
+
+                            <span>🍴</span>
+
+                            <div>
+                                <h3>Food</h3>
+                                <small>Meals & groceries</small>
+                            </div>
+
+                        </div>
+
+                        <strong id="reportFood">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                    <div class="report-progress">
+
+                        <div
+                            id="reportFoodProgress"
+                            style="width: 0%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRANSPORT -->
+
+                <div class="report-category">
+
+                    <div class="category-report-top">
+
+                        <div class="category-title">
+
+                            <span>🚌</span>
+
+                            <div>
+                                <h3>Transport</h3>
+                                <small>Travel & commuting</small>
+                            </div>
+
+                        </div>
+
+                        <strong id="reportTransport">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                    <div class="report-progress">
+
+                        <div
+                            id="reportTransportProgress"
+                            style="width: 0%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EDUCATION -->
+
+                <div class="report-category">
+
+                    <div class="category-report-top">
+
+                        <div class="category-title">
+
+                            <span>📚</span>
+
+                            <div>
+                                <h3>Education</h3>
+                                <small>Learning & study</small>
+                            </div>
+
+                        </div>
+
+                        <strong id="reportEducation">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                    <div class="report-progress">
+
+                        <div
+                            id="reportEducationProgress"
+                            style="width: 0%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SHOPPING -->
+
+                <div class="report-category">
+
+                    <div class="category-report-top">
+
+                        <div class="category-title">
+
+                            <span>🛍️</span>
+
+                            <div>
+                                <h3>Shopping</h3>
+                                <small>Personal purchases</small>
+                            </div>
+
+                        </div>
+
+                        <strong id="reportShopping">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                    <div class="report-progress">
+
+                        <div
+                            id="reportShoppingProgress"
+                            style="width: 0%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ENTERTAINMENT -->
+
+                <div class="report-category">
+
+                    <div class="category-report-top">
+
+                        <div class="category-title">
+
+                            <span>🎬</span>
+
+                            <div>
+                                <h3>Entertainment</h3>
+                                <small>Fun & leisure</small>
+                            </div>
+
+                        </div>
+
+                        <strong id="reportEntertainment">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                    <div class="report-progress">
+
+                        <div
+                            id="reportEntertainmentProgress"
+                            style="width: 0%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BILLS -->
+
+                <div class="report-category">
+
+                    <div class="category-report-top">
+
+                        <div class="category-title">
+
+                            <span>💡</span>
+
+                            <div>
+                                <h3>Bills</h3>
+                                <small>Regular payments</small>
+                            </div>
+
+                        </div>
+
+                        <strong id="reportBills">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                    <div class="report-progress">
+
+                        <div
+                            id="reportBillsProgress"
+                            style="width: 0%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CALCULATION ================= -->
+
+        <section class="calculation-section">
+
+            <div class="calculation-content">
+
+                <p class="small-heading">
+                    SAVINGS CALCULATION
+                </p>
+
+                <h2>
+                    The simple formula behind your report.
+                </h2>
+
+                <p>
+                    Your savings are calculated by subtracting
+                    your total expenses from your total income.
+                </p>
+
+            </div>
+
+
+            <div class="formula-box">
+
+                <div class="formula-item">
+
+                    <span>
+                        Total Income
+                    </span>
+
+                    <strong id="formulaIncome">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="formula-symbol">
+                    −
+                </div>
+
+
+                <div class="formula-item">
+
+                    <span>
+                        Total Expenses
+                    </span>
+
+                    <strong id="formulaExpense">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="formula-symbol">
+                    =
+                </div>
+
+
+                <div class="formula-item final-result">
+
+                    <span>
+                        Savings
+                    </span>
+
+                    <strong id="formulaSavings">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ASSIGNMENT CONCEPTS ================= -->
+
+        <section class="report-learning">
+
+            <div>
+
+                <p class="small-heading">
+                    MODULE 1 LEARNING OUTCOME
+                </p>
+
+                <h2>
+                    Programming concepts in action.
+                </h2>
+
+                <p>
+                    This expense calculator applies basic programming
+                    concepts to solve a practical real-world problem.
+                </p>
+
+            </div>
+
+
+            <div class="learning-points">
+
+                <div>
+
+                    <strong>Variables</strong>
+
+                    <span>
+                        Store income, expenses and savings.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Conditions</strong>
+
+                    <span>
+                        Determine financial status.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Loops</strong>
+
+                    <span>
+                        Process multiple transactions.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Functions</strong>
+
+                    <span>
+                        Perform calculations and updates.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    ExpenseWise
+                </h3>
+
+                <p>
+                    Personal Expense Calculator
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Dashboard
+                </a>
+
+                <a href="add-expense.html">
+                    Add Transaction
+                </a>
+
+                <a href="expense.html">
+                    Expenses
+                </a>
+
+                <a href="report.html">
+                    Report
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                Module 1 Take-Home Assignment • Personal Expense Calculator
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Main JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

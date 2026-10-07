@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Forecast | WeatherWise</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                ☁️ WeatherWise
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="forecast.html" class="active">Forecast</a></li>
+                <li><a href="travel.html">Travel Guide</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="forecast-page">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <p class="tagline">PLAN AHEAD</p>
+
+            <h1>Weather Forecast</h1>
+
+            <p>
+                Check the upcoming weather and plan your
+                journey with confidence.
+            </p>
+
+        </section>
+
+
+        <!-- Search Section -->
+        <section class="forecast-search">
+
+            <input
+                type="text"
+                id="forecastCity"
+                placeholder="Enter city name..."
+            >
+
+            <button id="forecastSearchBtn">
+                View Forecast
+            </button>
+
+        </section>
+
+
+        <!-- Loading -->
+        <p id="forecastLoading" class="loading">
+            Loading forecast...
+        </p>
+
+
+        <!-- Error -->
+        <p id="forecastError" class="error-message"></p>
+
+
+        <!-- Forecast Location -->
+        <section class="forecast-header">
+
+            <div>
+
+                <p>FORECAST FOR</p>
+
+                <h2 id="forecastCityName">
+                    Your City
+                </h2>
+
+            </div>
+
+            <div class="forecast-status">
+                📅 Upcoming Days
+            </div>
+
+        </section>
+
+
+        <!-- Forecast Cards -->
+        <section
+            class="forecast-grid"
+            id="forecastContainer"
+        >
+
+            <!-- Day 1 -->
+            <div class="forecast-card">
+
+                <p class="forecast-day">
+                    Today
+                </p>
+
+                <div class="forecast-icon">
+                    🌤️
+                </div>
+
+                <h3 class="forecast-date">
+                    --
+                </h3>
+
+                <h2 class="forecast-temperature">
+                    --°C
+                </h2>
+
+                <p class="forecast-condition">
+                    Loading...
+                </p>
+
+                <div class="forecast-details">
+
+                    <span>
+                        💧 Humidity: --
+                    </span>
+
+                    <span>
+                        💨 Wind: --
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Day 2 -->
+            <div class="forecast-card">
+
+                <p class="forecast-day">
+                    Tomorrow
+                </p>
+
+                <div class="forecast-icon">
+                    ☀️
+                </div>
+
+                <h3 class="forecast-date">
+                    --
+                </h3>
+
+                <h2 class="forecast-temperature">
+                    --°C
+                </h2>
+
+                <p class="forecast-condition">
+                    Loading...
+                </p>
+
+                <div class="forecast-details">
+
+                    <span>
+                        💧 Humidity: --
+                    </span>
+
+                    <span>
+                        💨 Wind: --
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Day 3 -->
+            <div class="forecast-card">
+
+                <p class="forecast-day">
+                    Day 3
+                </p>
+
+                <div class="forecast-icon">
+                    🌧️
+                </div>
+
+                <h3 class="forecast-date">
+                    --
+                </h3>
+
+                <h2 class="forecast-temperature">
+                    --°C
+                </h2>
+
+                <p class="forecast-condition">
+                    Loading...
+                </p>
+
+                <div class="forecast-details">
+
+                    <span>
+                        💧 Humidity: --
+                    </span>
+
+                    <span>
+                        💨 Wind: --
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Day 4 -->
+            <div class="forecast-card">
+
+                <p class="forecast-day">
+                    Day 4
+                </p>
+
+                <div class="forecast-icon">
+                    ☁️
+                </div>
+
+                <h3 class="forecast-date">
+                    --
+                </h3>
+
+                <h2 class="forecast-temperature">
+                    --°C
+                </h2>
+
+                <p class="forecast-condition">
+                    Loading...
+                </p>
+
+                <div class="forecast-details">
+
+                    <span>
+                        💧 Humidity: --
+                    </span>
+
+                    <span>
+                        💨 Wind: --
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Day 5 -->
+            <div class="forecast-card">
+
+                <p class="forecast-day">
+                    Day 5
+                </p>
+
+                <div class="forecast-icon">
+                    🌤️
+                </div>
+
+                <h3 class="forecast-date">
+                    --
+                </h3>
+
+                <h2 class="forecast-temperature">
+                    --°C
+                </h2>
+
+                <p class="forecast-condition">
+                    Loading...
+                </p>
+
+                <div class="forecast-details">
+
+                    <span>
+                        💧 Humidity: --
+                    </span>
+
+                    <span>
+                        💨 Wind: --
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Travel Planning -->
+        <section class="forecast-planner">
+
+            <div class="planner-icon">
+                🧳
+            </div>
+
+            <div class="planner-content">
+
+                <p class="tagline">
+                    TRAVEL PLANNING
+                </p>
+
+                <h2>
+                    Is the weather right for your trip?
+                </h2>
+
+                <p>
+                    Use our weather-based travel guide to
+                    discover activities and useful preparation
+                    tips for different weather conditions.
+                </p>
+
+                <a
+                    href="travel.html"
+                    class="cta-button"
+                >
+                    Explore Travel Guide
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Information Section -->
+        <section class="forecast-info">
+
+            <div class="section-heading">
+
+                <p>PLAN SMART</p>
+
+                <h2>Why Check the Forecast?</h2>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <span>🗺️</span>
+
+                    <h3>Plan Your Route</h3>
+
+                    <p>
+                        Choose the best time and conditions
+                        for your journey.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span>👕</span>
+
+                    <h3>Pack Smart</h3>
+
+                    <p>
+                        Prepare clothing and travel essentials
+                        according to the weather.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span>⏰</span>
+
+                    <h3>Choose the Right Time</h3>
+
+                    <p>
+                        Schedule outdoor activities when
+                        weather conditions are favorable.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 WeatherWise | Smart Weather & Travel Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/forecast.js"></script>
+
+</body>
+</html>

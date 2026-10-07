@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Current Weather | WeatherWise</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                ☁️ WeatherWise
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="weather.html" class="active">Weather</a></li>
+                <li><a href="forecast.html">Forecast</a></li>
+                <li><a href="travel.html">Travel Guide</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="weather-page">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <p class="tagline">REAL-TIME WEATHER</p>
+
+            <h1>Check the Weather</h1>
+
+            <p>
+                Search for a city to view its current weather conditions.
+            </p>
+
+        </section>
+
+
+        <!-- Search -->
+        <section class="weather-search">
+
+            <input
+                type="text"
+                id="weatherCity"
+                placeholder="Enter city name..."
+            >
+
+            <button id="weatherSearchBtn">
+                Search
+            </button>
+
+        </section>
+
+
+        <!-- Loading Message -->
+        <p id="loading" class="loading">
+            Loading weather information...
+        </p>
+
+
+        <!-- Error Message -->
+        <p id="errorMessage" class="error-message"></p>
+
+
+        <!-- Weather Result -->
+        <section id="weatherResult" class="weather-result">
+
+            <!-- Location -->
+            <div class="weather-location">
+
+                <p>Current Weather</p>
+
+                <h2 id="cityName">
+                    -- 
+                </h2>
+
+                <span id="weatherDescription">
+                    --
+                </span>
+
+            </div>
+
+
+            <!-- Main Weather -->
+            <div class="main-weather">
+
+                <div class="weather-icon-large">
+                    <img
+                        id="weatherIcon"
+                        src=""
+                        alt="Weather icon"
+                    >
+                </div>
+
+                <div class="temperature">
+
+                    <h2 id="temperature">
+                        --°C
+                    </h2>
+
+                    <p id="condition">
+                        --
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Weather Details -->
+            <div class="weather-details">
+
+                <div class="weather-detail-card">
+
+                    <span>🌡️</span>
+
+                    <div>
+                        <p>Feels Like</p>
+                        <h3 id="feelsLike">--°C</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="weather-detail-card">
+
+                    <span>💧</span>
+
+                    <div>
+                        <p>Humidity</p>
+                        <h3 id="humidity">--%</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="weather-detail-card">
+
+                    <span>💨</span>
+
+                    <div>
+                        <p>Wind Speed</p>
+                        <h3 id="windSpeed">-- km/h</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="weather-detail-card">
+
+                    <span>🌬️</span>
+
+                    <div>
+                        <p>Pressure</p>
+                        <h3 id="pressure">-- hPa</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Travel Tip -->
+        <section class="weather-tip">
+
+            <div class="tip-icon">
+                🧳
+            </div>
+
+            <div>
+
+                <h2>Planning a Trip?</h2>
+
+                <p>
+                    Check our Travel Guide for weather-based
+                    suggestions and activity ideas.
+                </p>
+
+                <a href="travel.html">
+                    Explore Travel Suggestions →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 WeatherWise | Smart Weather & Travel Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/weather.js"></script>
+
+</body>
+</html>

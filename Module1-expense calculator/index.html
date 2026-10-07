@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Expense Calculator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">₹</div>
+
+            <div>
+                <h2>ExpenseWise</h2>
+                <span>Personal Expense Calculator</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="add-expense.html">Add Transaction</a>
+            <a href="expense.html">Expenses</a>
+            <a href="report.html">Report</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="dashboard-container">
+
+        <!-- HERO SECTION -->
+
+        <section class="hero-section">
+
+            <div class="hero-text">
+
+                <p class="small-heading">PERSONAL FINANCE DASHBOARD</p>
+
+                <h1>
+                    Take control of your
+                    <span>money.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Track your income, understand your expenses,
+                    calculate your savings, and make smarter financial decisions.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="add-expense.html" class="primary-btn">
+                        + Add Transaction
+                    </a>
+
+                    <a href="report.html" class="secondary-btn">
+                        View Report →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SAVINGS HIGHLIGHT -->
+
+            <div class="savings-highlight">
+
+                <div class="circle-decoration"></div>
+
+                <p>YOUR SAVINGS</p>
+
+                <h2 id="heroSavings">₹0</h2>
+
+                <span id="savingsMessage">
+                    Start adding your income and expenses.
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUMMARY CARDS ================= -->
+
+        <section class="summary-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="small-heading">FINANCIAL OVERVIEW</p>
+                    <h2>Your money at a glance</h2>
+                </div>
+
+            </div>
+
+
+            <div class="summary-grid">
+
+                <!-- INCOME -->
+
+                <div class="summary-card income-card">
+
+                    <div class="card-top">
+
+                        <div class="card-icon">
+                            ↗
+                        </div>
+
+                        <span>Income</span>
+
+                    </div>
+
+                    <h3 id="totalIncome">₹0</h3>
+
+                    <p>Total income recorded</p>
+
+                </div>
+
+
+                <!-- EXPENSE -->
+
+                <div class="summary-card expense-card">
+
+                    <div class="card-top">
+
+                        <div class="card-icon">
+                            ↘
+                        </div>
+
+                        <span>Expenses</span>
+
+                    </div>
+
+                    <h3 id="totalExpense">₹0</h3>
+
+                    <p>Total money spent</p>
+
+                </div>
+
+
+                <!-- SAVINGS -->
+
+                <div class="summary-card savings-card">
+
+                    <div class="card-top">
+
+                        <div class="card-icon">
+                            ✓
+                        </div>
+
+                        <span>Savings</span>
+
+                    </div>
+
+                    <h3 id="totalSavings">₹0</h3>
+
+                    <p>Income minus expenses</p>
+
+                </div>
+
+
+                <!-- SAVINGS RATE -->
+
+                <div class="summary-card rate-card">
+
+                    <div class="card-top">
+
+                        <div class="card-icon">
+                            %
+                        </div>
+
+                        <span>Savings Rate</span>
+
+                    </div>
+
+                    <h3 id="savingsRate">0%</h3>
+
+                    <p>Percentage of income saved</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="quick-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="small-heading">QUICK ACTIONS</p>
+                    <h2>Manage your finances</h2>
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+                <!-- ADD TRANSACTION -->
+
+                <a href="add-expense.html" class="quick-card">
+
+                    <div class="quick-icon">
+                        +
+                    </div>
+
+                    <div>
+                        <h3>Add Income / Expense</h3>
+
+                        <p>
+                            Record a new income or expense transaction.
+                        </p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <!-- EXPENSES -->
+
+                <a href="expense.html" class="quick-card">
+
+                    <div class="quick-icon">
+                        ≡
+                    </div>
+
+                    <div>
+                        <h3>View Expenses</h3>
+
+                        <p>
+                            View and categorize your recorded expenses.
+                        </p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <!-- REPORT -->
+
+                <a href="report.html" class="quick-card">
+
+                    <div class="quick-icon">
+                        ◴
+                    </div>
+
+                    <div>
+                        <h3>Summary Report</h3>
+
+                        <p>
+                            Analyze your income, expenses and savings.
+                        </p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT TRANSACTIONS ================= -->
+
+        <section class="recent-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="small-heading">TRANSACTION HISTORY</p>
+                    <h2>Recent transactions</h2>
+                </div>
+
+                <a href="expense.html" class="view-link">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="transaction-box">
+
+                <div id="recentTransactions" class="transaction-list">
+
+                    <!-- JavaScript will add transactions here -->
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            ₹
+                        </div>
+
+                        <h3>No transactions yet</h3>
+
+                        <p>
+                            Add your first income or expense to get started.
+                        </p>
+
+                        <a href="add-expense.html" class="small-btn">
+                            Add Transaction
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORY PREVIEW ================= -->
+
+        <section class="category-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="small-heading">EXPENSE CATEGORIES</p>
+                    <h2>Where does your money go?</h2>
+                </div>
+
+                <a href="expense.html" class="view-link">
+                    Explore categories →
+                </a>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <div class="category-card">
+                    <span class="category-symbol">🍴</span>
+                    <h3>Food</h3>
+                    <p id="foodAmount">₹0</p>
+                </div>
+
+                <div class="category-card">
+                    <span class="category-symbol">🚌</span>
+                    <h3>Transport</h3>
+                    <p id="transportAmount">₹0</p>
+                </div>
+
+                <div class="category-card">
+                    <span class="category-symbol">📚</span>
+                    <h3>Education</h3>
+                    <p id="educationAmount">₹0</p>
+                </div>
+
+                <div class="category-card">
+                    <span class="category-symbol">🛍️</span>
+                    <h3>Shopping</h3>
+                    <p id="shoppingAmount">₹0</p>
+                </div>
+
+                <div class="category-card">
+                    <span class="category-symbol">🎬</span>
+                    <h3>Entertainment</h3>
+                    <p id="entertainmentAmount">₹0</p>
+                </div>
+
+                <div class="category-card">
+                    <span class="category-symbol">💡</span>
+                    <h3>Bills</h3>
+                    <p id="billsAmount">₹0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ASSIGNMENT CONCEPTS ================= -->
+
+        <section class="learning-section">
+
+            <div class="learning-content">
+
+                <p class="small-heading">MODULE 1 • PROGRAMMING CONCEPTS</p>
+
+                <h2>
+                    Simple logic behind
+                    <span>smart calculations.</span>
+                </h2>
+
+                <p>
+                    This project demonstrates fundamental programming concepts
+                    including variables, conditions, loops and functions through
+                    a practical personal finance application.
+                </p>
+
+            </div>
+
+
+            <div class="concept-list">
+
+                <div class="concept">
+                    <strong>01</strong>
+                    <div>
+                        <h3>Variables</h3>
+                        <p>Store income, expenses and savings values.</p>
+                    </div>
+                </div>
+
+                <div class="concept">
+                    <strong>02</strong>
+                    <div>
+                        <h3>Conditions</h3>
+                        <p>Determine whether your savings are positive or negative.</p>
+                    </div>
+                </div>
+
+                <div class="concept">
+                    <strong>03</strong>
+                    <div>
+                        <h3>Loops</h3>
+                        <p>Process and display multiple expense records.</p>
+                    </div>
+                </div>
+
+                <div class="concept">
+                    <strong>04</strong>
+                    <div>
+                        <h3>Functions</h3>
+                        <p>Calculate savings, totals and category amounts.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>ExpenseWise</h3>
+                <p>
+                    Personal Expense Calculator
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="index.html">Dashboard</a>
+                <a href="add-expense.html">Add Transaction</a>
+                <a href="expense.html">Expenses</a>
+                <a href="report.html">Report</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                Module 1 Take-Home Assignment • Personal Expense Calculator
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
